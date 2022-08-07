@@ -1,0 +1,624 @@
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+html{
+	font-size: 62.5%;
+	box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+body{
+	font-size: 16px;/* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+	mejor provecho al rem en los font-size--SOLO OCUPAR REM EN LA PAGINA--*/
+    background: linear-gradient(#EB5353, #f96023);
+}
+.rayo{
+    width: 80rem;
+    height: 80rem;
+    /*border: 1rem solid #F9D923;
+    box-shadow: inset 0px 0px 40px gold;*/
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: url(#wavy) blur(1px);
+}
+.rayo::before{
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    border: 20px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #F9D923, 
+                inset 0 0 50px #F9D923;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002) ;
+    -moz-box-reflect: below 10px linear-gradient(transparent, transparent, #0002) ;
+    animation:  flamas 5s linear infinite;
+}
+.rayo::after{
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    border: 20px solid #F9D923;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #F9D923, 
+                inset 0 0 10px #F9D923;
+}
+@keyframes flamas{
+    0%{
+        box-shadow: 0 0 50px #F9D923, 
+                inset 0 0 50px #F9D923;
+        filter: hue-rotate(0deg);
+    }
+    20%{
+        box-shadow: 0 0 60px #F9D923, 
+                inset 0 0 60px #F9D923;
+    }
+    40%{
+        box-shadow: 0 0 40px #F9D923, 
+                inset 0 0 40px #F9D923;
+    }
+    60%{
+        box-shadow: 0 0 80px #F9D923, 
+                inset 0 0 80px #F9D923;
+    }
+    80%{
+        box-shadow: 0 0 100px #F9D923, 
+                inset 0 0 100px #F9D923;
+    }
+    100%{
+        box-shadow: 0 0 50px #F9D923, 
+                inset 0 0 50px #F9D923;
+        filter: hue-rotate(360deg);
+    }
+}
+svg{
+   width: 0;
+   height: 0; 
+}
+
+.titu-center{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: translate(-50%);
+    width: 100%;
+}
+.titu{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 4rem;
+    color: transparent;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #f00,#ff0,#0ff,#0f0,#00f);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-size: 1000%;
+    animation: eee 20s linear infinite;
+}
+@keyframes eee{
+    0%{
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+}
+
+.fa-bolt{
+    font-size: 25rem;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gold;
+    text-shadow: 0px 0px 20px gold;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        text-shadow: 0px 0px 20px gold;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50%{
+        text-shadow: 0px 0px 60px gold;
+        transform: translate(-50%, -50%) scale(1.5);
+
+       
+    }
+    100%{
+        text-shadow: 0px 0px 20px gold;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+/*-------------------------------Circulos chicos------------------------*/
+
+.circle-int{
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border: 1rem double #F9D923;
+    border-radius: 50%;
+
+    background: linear-gradient(120deg, #36AE7C 30%, #fff 38%, #fff 
+  40%, #36AE7C 48%); 
+  background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: anilateral 2s infinite; 
+}
+@keyframes anilateral {
+    100% {
+      background-position: -100% 0;
+    }
+  }
+.circle-int:hover{
+    box-shadow: none;
+    transform:skewY(0deg);
+}
+/*.circle-int .titu{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #112D4E;
+    width: 0;
+    left: 50%;
+    margin-left: 0;
+    transition: 1s;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.circle-int:hover .titu{
+    width: 16rem;
+    margin-left: 0rem;
+}*/
+/*----------------------------------------------Etiqueta------------------------------*/
+.etiquet-price {
+    position: relative;
+    background: #3bec99;
+    width: 14.46rem;
+    margin-left: 5.5rem;
+    bottom: 14rem;
+    padding: .2rem 1.2rem;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .etiquet-price p {
+    margin: 0;
+    padding: .2rem;
+    display: flex;
+    font-size: 1.9rem;
+    color: #187498;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .etiquet-price p:before {
+    content: "";
+    margin-right: 5px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .etiquet-price p:after {
+    content: "";
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .etiquet-price div {
+    position: absolute;
+    bottom: -23px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid #02c53d;
+    border-bottom: 10px solid transparent;
+    border-right: 13px solid transparent;
+    z-index: -6;
+  }
+
+/*.circle-int i{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-size: 9rem;
+    color: #3F72AF;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+.circle-int:hover i{
+    animation: giragira 2s ease-in-out;
+}
+@keyframes giragira{
+	0% {
+		transform: translate(-50%, -50%) rotateY(0deg);
+	  }
+	  50% {
+		transform: translate(-50%, -50%) rotateY(180deg);
+	  }
+    100%{
+      transform: translate(-50%, -50%) rotateY(0deg);
+    }
+}*/
+
+/*--------------------------------------Ladeo------------------------*/
+.mundo{
+  top: 2rem;
+  left: 25rem;
+  transform:skewY(-5deg);
+  box-sizing: border-box;
+  box-shadow: -1px -1px 0 #F9D923,
+              -2px -2px 0 #F9D923,
+              -3px -3px 0 #F9D923,
+              -4px -4px 0 #F9D923,
+              -5px -5px 0 #F9D923,
+              -6px -6px 0 #F9D923;
+  transition: .5s;
+}
+
+.compu{
+    top: 40rem;
+    left: 24rem;    
+    transform:skewY(-5deg);
+    box-sizing: border-box;
+    box-shadow: -1px -1px 0 #F9D923,
+                -2px -2px 0 #F9D923,
+                -3px -3px 0 #F9D923,
+                -4px -4px 0 #F9D923,
+                -5px -5px 0 #F9D923,
+                -6px -6px 0 #F9D923;
+    transition: .5s;
+}
+.mundo:hover, .compu:hover{
+    box-shadow: none;
+    transform:skewY(0deg);
+}
+.casa{
+    top: 40rem;
+    right: 24rem;   
+    transform:skewY(5deg);
+    box-sizing: border-box;
+    box-shadow: 1px -1px 0 #F9D923,
+                2px -2px 0 #F9D923,
+                3px -3px 0 #F9D923,
+                4px -4px 0 #F9D923,
+                5px -5px 0 #F9D923,
+                6px -6px 0 #F9D923;
+    transition: .5s;
+}
+.camara{
+    top: 2rem;
+    right: 25rem;
+    transform:skewY(5deg);
+    box-sizing: border-box;
+    box-shadow: 1px -1px 0 #F9D923,
+                2px -2px 0 #F9D923,
+                3px -3px 0 #F9D923,
+                4px -4px 0 #F9D923,
+                5px -5px 0 #F9D923,
+                6px -6px 0 #F9D923;
+    transition: .5s;
+}
+.casa:hover, .camara:hover{
+    box-shadow: none;
+    transform:skewY(0deg);
+}
+
+/*------------------------------------Imagenes---------------------------*/
+.circle-int img{
+    position: relative;
+    top: 2rem;
+    left: 1.5rem;
+    width: 15rem;
+    height: 15rem;
+    transition: .3s;
+}
+.circle-int img:hover{
+    transform: scale(1.2);
+    transition: .3s;
+}
+.box-int{
+    display: none;
+}
+/*-------------------------------------------laptop box---------------------------------------*/
+.btn{  
+    position: absolute;
+    cursor: pointer;
+    top: 45rem;
+    left: 29rem;  
+    width: 10rem;
+    height: 10rem;
+    z-index: 5;
+    opacity: 0;
+
+}
+.btn:checked ~ .compu{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: linear-gradient(#36AE7C, #03be13);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0%;
+    z-index: 4;
+}
+.btn:checked ~ .compu img{
+    width: 20rem;
+    height: 20rem;
+   }
+   .btn:checked ~ .compu .etiquet-price{
+       width: 40rem;
+       height: 10rem;
+       top: -20%;
+       left: 50%;
+       background: transparent;
+       transform: translate(-50%, -50%);
+   }
+   .btn:checked ~ .compu .etiquet-price div{
+       border-top: none;
+   }
+   .btn:checked ~ .compu .etiquet-price p{
+       font-size: 10rem;
+       color: #fff;
+       text-align: center;
+   }
+   .btn:checked ~ .compu .box-int{
+       display: block;
+       position: relative;
+       width: 100%;
+       height: auto;
+       border: 1px solid white;
+   }
+   
+   .btn:checked{
+       position: relative;
+       top: 7rem;
+       left: 5rem;
+   }
+
+/*--------------------------------------Mundo- Box-------------------------------------*/
+.btn2{  
+    position: absolute;
+    cursor: pointer;
+    top: 7rem;
+    left: 30rem;  
+    width: 10rem;
+    height: 10rem;
+    z-index: 5;
+    opacity: 0;
+}
+.btn2:checked ~ .mundo{
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+position: absolute;
+background: linear-gradient(#36AE7C, #03be13);
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 0%;
+z-index: 4;
+}
+.btn2:checked ~ .mundo img{
+ width: 20rem;
+ height: 20rem;
+}
+.btn2:checked ~ .mundo .etiquet-price{
+    width: 40rem;
+    height: 10rem;
+    top: -20%;
+    left: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+}
+.btn2:checked ~ .mundo .etiquet-price div{
+    border-top: none;
+}
+.btn2:checked ~ .mundo .etiquet-price p{
+    font-size: 10rem;
+    color: #fff;
+    text-align: center;
+}
+.btn2:checked ~ .mundo .box-int{
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+}
+
+.btn2:checked{
+    position: relative;
+    left: 5rem;
+}
+/*-------------------------------------------Home box---------------------------------------*/
+.btn3{  
+    position: absolute;
+    cursor: pointer;
+    top: 45rem;
+    right: 29rem;  
+    width: 10rem;
+    height: 10rem;
+    z-index: 5;
+    opacity: 0;
+
+}
+.btn3:checked ~ .casa{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: linear-gradient(#36AE7C, #03be13);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0%;
+    z-index: 4;
+}
+.btn3:checked ~ .casa img{
+    width: 20rem;
+    height: 20rem;
+   }
+   .btn3:checked ~ .casa .etiquet-price{
+       width: 40rem;
+       height: 10rem;
+       top: -20%;
+       left: 50%;
+       background: transparent;
+       transform: translate(-50%, -50%);
+   }
+   .btn3:checked ~ .casa .etiquet-price div{
+       border-top: none;
+   }
+   .btn3:checked ~ .casa .etiquet-price p{
+       font-size: 10rem;
+       color: #fff;
+       text-align: center;
+   }
+   .btn3:checked ~ .casa .box-int{
+       display: block;
+       position: relative;
+       width: 100%;
+       height: auto;
+       border: 1px solid white;
+   }
+   
+   .btn3:checked{
+       position: relative;
+       top: 7rem;
+       left: 5rem;
+   }
+   /*--------------------------------------Camara- Box-------------------------------------*/
+.btn4{  
+    position: absolute;
+    cursor: pointer;
+    top: 7rem;
+    right: 30rem;  
+    width: 10rem;
+    height: 10rem;
+    z-index: 5;
+    opacity: 0;
+}
+.btn4:checked ~ .camara{
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+position: absolute;
+background: linear-gradient(#36AE7C, #03be13);
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 0%;
+z-index: 4;
+}
+.btn4:checked ~ .camara img{
+ width: 20rem;
+ height: 20rem;
+}
+.btn4:checked ~ .camara .etiquet-price{
+    width: 40rem;
+    height: 10rem;
+    top: -20%;
+    left: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+}
+.btn4:checked ~ .camara .etiquet-price div{
+    border-top: none;
+}
+.btn4:checked ~ .camara .etiquet-price p{
+    font-size: 10rem;
+    color: #fff;
+    text-align: center;
+}
+.btn4:checked ~ .camara .box-int{
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+}
+
+.btn4:checked{
+    position: relative;
+    left: 5rem;
+}
+/*------------------------------Cajas--------------------------------------*/
+/*.mundo:hover .redes-caja{
+    transform: translate(0%, -50%);  
+    transition: all 0.8s ease; 
+}
+.redes-caja{
+    position: absolute;
+    z-index: 200;
+    top: 40%;
+    width: 100rem;
+    height: 100rem;
+    background: #72FFFF;
+    transform: skewY(0deg) translate(100%, -50%);  
+}
+*/
+
+ /* .oculto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background: rgba(134, 182, 221, 0.623);
+   background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255,0));
+   backdrop-filter: blur(10px);
+   --webkit--backdrop-filter: blur(10px);
+   --moz--backdrop-filter: blur(10px);
+   border: 1px solid rgba(255,255,255, 0.18);
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    display: grid;
+    place-items: center;
+    transition: var(--transition);
+    visibility: hidden;
+    z-index: 100;
+  }
+  .open-modal {
+    position: fixed;
+    visibility: visible;
+    overflow-y: scroll;
+    z-index: 1000;
+  }*/
