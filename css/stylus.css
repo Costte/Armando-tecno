@@ -480,7 +480,7 @@ z-index: 4;
 
 .btn2:checked{
     position: relative;
-    top: -35rem;
+    top: 1rem;
     left: 18rem;
     width: 5rem;
     height: 5rem;
@@ -614,7 +614,7 @@ z-index: 4;
    
    .btn:checked{
        position: relative;
-       top: -35rem;
+       top: 1rem;
        left: 18rem;
        width: 5rem;
        height: 5rem;
@@ -675,7 +675,7 @@ z-index: 4;
    
    .btn3:checked{
        position: relative;
-       top: -35rem;
+       top: 1rem;
        left: 18rem;
        width: 5rem;
        height: 5rem;
@@ -736,7 +736,7 @@ z-index: 4;
 
 .btn4:checked{
     position: relative;
-    top: -35rem;
+    top: 1rem;
     left: 18rem;
     width: 5rem;
     height: 5rem;
