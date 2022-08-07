@@ -155,9 +155,10 @@ svg{
 }
 /*------------------------------Redes Sociales---------------------------------*/
 .sociales-redes{
-    position: relative;
-    top: 10rem;
-    left: 128rem;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
 }
 .sociales-redes a{
     position: relative;
